@@ -11,6 +11,7 @@ resource "yandex_compute_instance_group" "events_api_ig" {
     resources {
       memory = 2
       cores  = 2
+      core_fraction: 5
     }
     boot_disk {
       mode = "READ_WRITE"
@@ -19,6 +20,9 @@ resource "yandex_compute_instance_group" "events_api_ig" {
         size = 10
       }
     }
+   scheduling_policy:
+     preemptible: true
+
     network_interface {
       network_id = yandex_vpc_network.internal.id
       subnet_ids = [yandex_vpc_subnet.internal-a.id, yandex_vpc_subnet.internal-b.id, yandex_vpc_subnet.internal-c.id]
@@ -34,7 +38,7 @@ resource "yandex_compute_instance_group" "events_api_ig" {
 
   scale_policy {
     auto_scale {
-      initial_size = 3
+      initial_size = 2
       measurement_duration = 60
       cpu_utilization_target = 60
       min_zone_size = 1

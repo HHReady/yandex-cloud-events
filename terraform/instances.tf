@@ -9,8 +9,9 @@ resource "yandex_compute_instance" "build" {
   platform_id = "standard-v1"
 
   resources {
-    cores  = 1
+    cores  = 2
     memory = 2
+    core_fraction: 5
   }
 
   boot_disk {
@@ -19,6 +20,9 @@ resource "yandex_compute_instance" "build" {
       size = 10
     }
   }
+
+  scheduling_policy:
+    preemptible: true
 
   network_interface {
     subnet_id = yandex_vpc_subnet.internal-a.id
@@ -55,8 +59,9 @@ resource "yandex_compute_instance" "monitoring" {
   platform_id = "standard-v1"
 
   resources {
-    cores  = 1
+    cores  = 2
     memory = 2
+    core_fraction: 5
   }
 
   boot_disk {
@@ -65,6 +70,9 @@ resource "yandex_compute_instance" "monitoring" {
       size = 10
     }
   }
+
+  scheduling_policy:
+    preemptible: true
 
   network_interface {
     subnet_id = yandex_vpc_subnet.internal-a.id
