@@ -1,7 +1,7 @@
 users:
-  - name: vozerov
+  - name: dima
     groups: sudo
     shell: /bin/bash
     sudo: ['ALL=(ALL) NOPASSWD:ALL']
     ssh-authorized-keys:
-      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCtCGJinXDwKlenUFSsGWisxaF0DcNiV8utVEmfka3se0CW2yNIr1vDCeJxPdAlxGG0O/28WLWuTArLiDsTJjYqN+VchXLAfQmCn+5A313RjZlJK0KSxgL8IP6Q68diUzuCKdisjhKIKISTCzfL7uTKE0JEsUsF7bfSYvOEBtYFLWD1XH4qmi6HeFpSsnr7EPVC7FZzFdOgpZ6Vm6fwS7ygdVLapm6SH1lkNm0Xnt3WjaPkZaWRcAmUxC0RWT36QNwbBKTVLaFbfuF4FBeuBm7cwt2a/nnQzpbk9lVkeZYhFxH/5Zi8Uv8LYYJwTBvYzXaceDdH2zSxYwltiCTaKiYl vozerov@mba
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDZc0Brz3HFCcywyZpqLmXTc5VogApy8MXNU1fixAOhDETiSdeDhRlleMA0EOfmlxsIhnaVb80Fab8FjBYlGSGGBsy6RSwqYMrvxZQCCqwH5AOTMozwAaVNxp1AhfqKAlXrtDDuGrslyLmJQEaZ4Gb87xkZnJCL32UfSzT3fB4SQzWostjw4xuW1gXTHTDOQrhICH4FhHWBRQWstkyH4FrE7vNMTxdt7EWLUgN+N4Fl80dlZjv1lcyawnx+jii9ewuIaaC48r2MreU7bI8lLwR++ag3WX2YLJOq1sYTNIi9HUxQiUzJgBzAEqaJtT2cQydjeLcac/8ZIjCMWgtmamB/RJg1CG+n2wjHgo/8zXLhQ6Kl+QUNs0FPz4/IVVCTIqwWM8HfacgbbigNLzkwpdQ1QB1KpMIryuEoaztjXgYcPC6BcDG2woz/aarkVFHZEaXSHvPyg77cI03T/MdJuh7s2dVTEFVW/JnyF3KJ6V8qGcWv1gEc3b2Vxepv7iVBVuM= ubuntu@ansible
